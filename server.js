@@ -17,3 +17,8 @@ const client = new Client({
         rejectUnauthorized: false,
     },
 });
+
+// Routing
+app.get("/", (req, res)=>{
+    res.render("index")
+});
