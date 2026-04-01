@@ -46,4 +46,8 @@ h1, h2, h3 {letter-spacing: -6%; font-weight: 700;}
     font-size: 1rem;
     cursor: pointer;
     font: inherit;
+    transition: background 1s ease;
+}
+.btn:hover {
+    background: #3d87f7;
 }
