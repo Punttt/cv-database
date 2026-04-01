@@ -22,3 +22,8 @@ const client = new Client({
 app.get("/", (req, res)=>{
     res.render("index")
 });
+
+// Startar applikationen
+app.listen(process.env.PORT, ()=>{
+    console.log(`Server startad på http://localhost:${process.env.PORT}`);
+})
