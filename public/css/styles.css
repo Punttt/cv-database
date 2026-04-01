@@ -31,6 +31,18 @@ h1, h2, h3 {letter-spacing: -6%; font-weight: 700;}
 
 .error{ color: tomato; font-weight: 600;}
 
+/* Sections */
+.form-section{
+    width: 100%;
+    border: 1px solid red;
+}
+
+.course-form{
+    display: grid;
+}
+
+
+
 /* Utility */
 .container {
     max-width: 800px;
