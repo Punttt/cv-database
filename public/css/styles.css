@@ -34,14 +34,26 @@ h1, h2, h3 {letter-spacing: -6%; font-weight: 700;}
 /* Sections */
 .form-section{
     width: 100%;
-    border: 1px solid red;
 }
 
 .course-form{
     display: grid;
 }
 
+label{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
 
+input[type=text],input[type=url]{
+    padding: 0.25rem;
+    font: inherit;
+}
+
+select {
+    font: inherit;
+    padding: 0.45rem;
+}
 
 /* Utility */
 .container {
