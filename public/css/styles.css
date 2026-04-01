@@ -1,3 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color: beige;
+    color: rgb(26, 25, 25);
+    font-family: "Sen", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+main{
+    background-color: #fff;
+    padding-inline: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+/* Text */
+h1, h2, h3 {letter-spacing: -6%; font-weight: 700;}
+
+.error{ color: tomato; font-weight: 600;}
+
+/* Utility */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
 }
