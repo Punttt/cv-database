@@ -53,7 +53,20 @@ app.get("/about", (req, res) => {
     res.render("about", { error: "" });
 });
 
+// Tar bort kurser
+app.post("/delete", async(req, res)=>{
+    const id = req.body.id;
 
+    try {
+        await client.query("DELETE FROM courses WHERE id = $1", [id]);
+        res.redirect("/");
+    } catch (err) {
+        console.log(err);
+        res.redirect("/");
+    }
+})
+
+// Lägger till kurser 
 app.post("/addcourse", async(req, res)=>{
     let name = req.body.name;
     let code = req.body.code;

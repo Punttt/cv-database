@@ -30,7 +30,7 @@
                                     <td><a href="<%= course.url %>" target="_blank"><%= course.code %></a></td>
                                     <td><%= course.progression %></td>
                                     <td>
-                                        <form method="post">
+                                        <form action="/delete" method="post">
                                             <input type="hidden" name="id" value="<%= course.id %>">
                                             <button class="btn-delete">Radera</button>
                                         </form>
