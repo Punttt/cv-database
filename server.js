@@ -42,7 +42,7 @@ app.get("/about", (req, res) => {
 });
 
 
-app.post("/", async(req, res)=>{
+app.post("/addcourse", async(req, res)=>{
     let name = req.body.name;
     let code = req.body.code;
     let url = req.body.url;
@@ -54,7 +54,7 @@ app.post("/", async(req, res)=>{
     // Rätt validering
     if (name === "" || code === "" || url === "" || progression === "") {
         error = "Du har glömt att fylla i alla fält!";
-        return res.render("index", { error });
+        return res.render("addcourse", { error });
     }
 
     try {
@@ -63,11 +63,11 @@ app.post("/", async(req, res)=>{
             "INSERT INTO courses(name, code, url, progression)VALUES($1, $2, $3, $4)",[name, code, url, progression]
 
         );
-        res.redirect("/");
+        res.redirect("/addcourse");
 
     } catch(error){
         console.log(error);
-        res.render("index", { error: "Ett fel uppstod vid lagring." });
+        res.render("addcourse", { error: "Ett fel uppstod vid lagring." });
     }
 });
 
