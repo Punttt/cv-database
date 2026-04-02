@@ -71,6 +71,7 @@ p { margin-bottom: 1rem;}
     border: 1px solid tomato;
     background: rgba(255, 99, 71, 0.247);
     border-radius: 3px;
+    margin-bottom: 0.5rem;
 }
 
 /* Form section  */

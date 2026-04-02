@@ -51,7 +51,7 @@ app.post("/", async(req, res)=>{
     try {
         // Lagra i databasen här
         const result = await client.query(
-            "INSERT INTO cv_database(name, code, url, progression)VALUES($1, $2, $3, $4)",[name, code, url, progression]
+            "INSERT INTO courses(name, code, url, progression)VALUES($1, $2, $3, $4)",[name, code, url, progression]
 
         );
         res.redirect("/");
