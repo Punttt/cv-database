@@ -33,6 +33,15 @@ app.get("/", (req, res)=>{
     })
 });
 
+app.get("/addcourse", (req, res) => {
+    res.render("addcourse", { error: "" });
+});
+
+app.get("/about", (req, res) => {
+    res.render("about", { error: "" });
+});
+
+
 app.post("/", async(req, res)=>{
     let name = req.body.name;
     let code = req.body.code;

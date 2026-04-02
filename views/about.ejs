@@ -10,35 +10,6 @@
     <%- include("partials/main-header") %>
     <div class="container">
         <main>
-            <section class="form-section">
-                <h2>Fyll i dina kurser:</h2>
-
-                <form method="post" class="course-form">
-                    <% if(error != ""){ %>
-                        <span class="error"> <%= error %></span>
-                    <% } %>
-                    <label for="name">Kursnamn:</label>
-                    <input type="text" name="name">
-                    <br>
-                    <label for="code">Kurskod:</label>
-                    <input type="text" name="code">
-                    <br>
-                    <label for="url">Kursplan (url):</label>
-                    <input type="url" name="url">
-                    <br>
-                    <label for="progression">Progression:</label>
-                    <select name="progression">
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
-                    </select>
-                    <br>
-                    <input type="submit" value="Spara kurs" class="btn">
-                </form>
-            </section>
-            <section class="output-section">
-                <h2>Lista</h2>
-            </section>
             <section class="about-section">
                 <h2>Om applikationen</h2>
                 <p>Den här applikationen är skapad för att ge en enkel och tydlig översikt över kurser inom webbutveckling. Genom att samla kursnamn, kurskoder, progression och länkar till kursplaner på ett och samma ställe blir det lättare att hålla ordning på studierna och snabbt hitta den information som behövs.</p>
