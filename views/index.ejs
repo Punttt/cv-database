@@ -12,12 +12,18 @@
         <main>
             <section class="output-section">
                 <h2>Lista</h2>
-            </section>
-            <section class="about-section">
-                <h2>Om applikationen</h2>
-                <p>Den här applikationen är skapad för att ge en enkel och tydlig översikt över kurser inom webbutveckling. Genom att samla kursnamn, kurskoder, progression och länkar till kursplaner på ett och samma ställe blir det lättare att hålla ordning på studierna och snabbt hitta den information som behövs.</p>
-                <p>Systemet är byggt med fokus på enkelhet och tydlighet. Användaren kan lägga till nya kurser via ett formulär, och all information sparas direkt i en databas. När en kurs har lagts till visas den automatiskt på startsidan, vilket gör applikationen smidig att använda både i vardagen och som ett stöd under studierna.</p>
-                <p>Målet med applikationen är att skapa ett litet men robust verktyg som går att bygga vidare på. Den kan enkelt utvecklas med fler funktioner, som att redigera eller ta bort kurser, filtrera innehåll eller visa statistik. På så sätt fungerar den både som ett praktiskt hjälpmedel och som ett projekt för att utforska modern webbutveckling i praktiken.</p>
+                <p>Klicka på kurskoden för att söka rätt på kursplanen.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kursnamn</th>
+                            <th>Kurskod</th>
+                            <th>Progression</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="course-list"></tbody>
+                </table>
             </section>
         </main>
     </div>

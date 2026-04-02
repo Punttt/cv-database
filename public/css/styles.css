@@ -100,6 +100,37 @@ select {
 }
 
 /* Output section */
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+table tr{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+}
+
+th {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #0066ff;
+  color: white;
+}
+
+td {
+    text-align: center;
+}
 
 /* About section */
 
@@ -108,6 +139,20 @@ select {
 .container {
     max-width: 800px;
     margin: 0 auto;
+}
+
+.btn-error{
+    padding: 0.2rem 0.5rem;
+    background: tomato;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-size: 0.8rem;
+    letter-spacing: -6%;
+    cursor: pointer;
+    font: inherit;
+    transition: background 1s ease;
 }
 
 .btn {
@@ -129,5 +174,15 @@ select {
 @media (max-width:550px){
     header{
         flex-direction: column;
+    }
+    table tr{
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+    td{
+        font-size: 0.8rem;
+    }
+    th:nth-child(3),
+    td:nth-child(3) {
+        display: none;
     }
 }
