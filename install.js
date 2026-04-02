@@ -25,8 +25,8 @@ client.connect((err)=>{
 async function createTables() {
     try{
         const res = await client.query(`
-                DROP TABLE IF EXISTS cv_database;
-                CREATE TABLE IF NOT EXISTS cv_database(
+                DROP TABLE IF EXISTS courses;
+                CREATE TABLE IF NOT EXISTS courses(
                     id SERIAL PRIMARY KEY,
                     name VARCHAR(255) NOT NULL,
                     code VARCHAR(255) NOT NULL,

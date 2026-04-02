@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV DATABAS</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <%- include("partials/main-header") %>
+    <div class="container">
+        <main>
+            <section class="output-section">
+                <h2>Lista</h2>
+                <p>Klicka på kurskoden för att söka rätt på kursplanen.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kursnamn</th>
+                            <th>Kurskod</th>
+                            <th>Progression</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="course-list">
+                        <% if(courses != ""){ %>
+                            <% courses.forEach((course)=>{%>
+                                <tr>
+                                    <td><%= course.name %></td>
+                                    <td><a href="<%= course.url %>" target="_blank"><%= course.code %></a></td>
+                                    <td><%= course.progression %></td>
+                                    <td>
+                                        <form action="/delete" method="post">
+                                            <input type="hidden" name="id" value="<%= course.id %>">
+                                            <button class="btn-delete">Radera</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            <% }) %>
+                        <% } else { %>
+                            <tr>
+                                <td><p>Hittar inga kurser</p></td>
+                                <td><p>-</p></td>
+                                <td><p>-</p></td>
+                                <td><p>-</p></td>
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

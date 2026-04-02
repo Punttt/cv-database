@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: beige;
+    color: rgb(26, 25, 25);
+    font-family: "Sen", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-y: scroll;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    padding: 0.5rem;
+    background: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: -6%;
+    font-weight: 600;
+    color: rgb(26, 25, 25);
+}
+nav ul li a:hover{
+    background: #0066ff;
+    color: white;
+}
+
+/* General main */
+main{
+    padding: 0 1rem;
+}
+
+/* General section */
+section{
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+/* Text */
+h1, h2, h3 {letter-spacing: -6%; font-weight: 700;}
+h2 { margin-bottom: 0.5rem;}
+p { margin-bottom: 1rem;}
+
+.error{ 
+    color: tomato; 
+    font-weight: 600;
+    padding: 1rem;
+    border: 1px solid tomato;
+    background: rgba(255, 99, 71, 0.247);
+    border-radius: 3px;
+    margin-bottom: 0.5rem;
+}
+
+/* Form section  */
+.form-section{
+    width: 100%;
+}
+
+.course-form{
+    display: grid;
+}
+
+label{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+input[type=text],input[type=url]{
+    padding: 0.25rem;
+    font: inherit;
+}
+
+select {
+    font: inherit;
+    padding: 0.45rem;
+}
+
+/* Output section */
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+table tr{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+}
+
+th {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #0066ff;
+  color: white;
+}
+
+td {
+    text-align: center;
+}
+
+table a{
+    text-decoration: none;
+    color: rgb(26, 25, 25);
+}
+table a:hover{
+    color: rgb(110, 108, 108);
+}
+
+/* About section */
+
+
+/* Utility */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.btn-delete{
+    padding: 0 0.2rem;
+    background: tomato;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-size: 0.8rem;
+    letter-spacing: -6%;
+    cursor: pointer;
+    font: inherit;
+    transition: background 1s ease;
+}
+
+.btn {
+    padding: 0.5rem 1.2rem;
+    background: #0066ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font: inherit;
+    transition: background 1s ease;
+}
+.btn:hover {
+    background: #3d87f7;
+}
+
+/* Media Queries */
+@media (max-width:550px){
+    header{
+        flex-direction: column;
+    }
+    table tr{
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+    td{
+        font-size: 0.8rem;
+    }
+    th:nth-child(3),
+    td:nth-child(3) {
+        display: none;
+    }
+}
