@@ -132,6 +132,14 @@ td {
     text-align: center;
 }
 
+table a{
+    text-decoration: none;
+    color: rgb(26, 25, 25);
+}
+table a:hover{
+    color: rgb(110, 108, 108);
+}
+
 /* About section */
 
 
@@ -141,8 +149,8 @@ td {
     margin: 0 auto;
 }
 
-.btn-error{
-    padding: 0.2rem 0.5rem;
+.btn-delete{
+    padding: 0 0.2rem;
     background: tomato;
     color: white;
     border: none;

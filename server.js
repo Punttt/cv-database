@@ -27,10 +27,22 @@ client.connect((err)=>{
 });
 
 // Routing
-app.get("/", (req, res)=>{
-    res.render("index", {
-        error: ""
-    })
+app.get("/", async (req, res)=>{
+    try {
+        const result = await client.query("SELECT * FROM courses ORDER BY id DESC");
+
+        res.render("index", {
+            courses: result.rows,
+            error: ""
+        });        
+    } catch(err){
+        console.log(err);
+
+        res.render("index", {
+            courses: [],
+            error: "Kunde inte hämta några kurser."
+        })
+    }
 });
 
 app.get("/addcourse", (req, res) => {

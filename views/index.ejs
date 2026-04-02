@@ -22,7 +22,25 @@
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody id="course-list"></tbody>
+                    <tbody id="course-list">
+                        <% if(courses != ""){ %>
+                            <% courses.forEach((course)=>{%>
+                                <tr>
+                                    <td><%= course.name %></td>
+                                    <td><a href="<%= course.url %>" target="_blank"><%= course.code %></a></td>
+                                    <td><%= course.progression %></td>
+                                    <td><button data-id="<%= course.id %>" class="btn-delete">Radera</button></td>
+                                </tr>
+                            <% }) %>
+                        <% } else { %>
+                            <tr>
+                                <td><p>Hittar inga kurser</p></td>
+                                <td><p>-</p></td>
+                                <td><p>-</p></td>
+                                <td><p>-</p></td>
+                            </tr>
+                        <% } %>
+                    </tbody>
                 </table>
             </section>
         </main>
