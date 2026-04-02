@@ -18,29 +18,48 @@ const client = new Client({
     },
 });
 
+client.connect((err)=>{
+    if(err){
+        console.log(`Connection error: ${err}`);
+    } else {
+        console.log(`Connected to database!`);
+    }
+});
+
 // Routing
 app.get("/", (req, res)=>{
-    res.render("index")
+    res.render("index", {
+        error: ""
+    })
 });
 
 app.post("/", async(req, res)=>{
-    const name = req.body.name;
-    const code = req.body.code;
-    const url = req.body.url;
-    const progression = req.body.progression;
-    const error = "";
+    let name = req.body.name;
+    let code = req.body.code;
+    let url = req.body.url;
+    let progression = req.body.progression;
 
-    if( name === "" || code === "" || url === "" || progression === ""){
-        return res.redirect("/");
-    } 
+    let error = "";
+    let success = ""; // För att lagra en notis om att detlagrades i databasen
 
-    try{
+    // Rätt validering
+    if (name === "" || code === "" || url === "" || progression === "") {
+        error = "Du har glömt att fylla i alla fält!";
+        return res.render("index", { error });
+    }
 
+    try {
+        // Lagra i databasen här
+        const result = await client.query(
+            "INSERT INTO cv_database(name, code, url, progression)VALUES($1, $2, $3, $4)",[name, code, url, progression]
+
+        );
         res.redirect("/");
+
     } catch(error){
         console.log(error);
-        res.redirect("/");
-    } 
+        res.render("index", { error: "Ett fel uppstod vid lagring." });
+    }
 });
 
 // Startar applikationen
