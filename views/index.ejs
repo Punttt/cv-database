@@ -29,7 +29,12 @@
                                     <td><%= course.name %></td>
                                     <td><a href="<%= course.url %>" target="_blank"><%= course.code %></a></td>
                                     <td><%= course.progression %></td>
-                                    <td><button data-id="<%= course.id %>" class="btn-delete">Radera</button></td>
+                                    <td>
+                                        <form method="post">
+                                            <input type="hidden" name="id" value="<%= course.id %>">
+                                            <button class="btn-delete">Radera</button>
+                                        </form>
+                                    </td>
                                 </tr>
                             <% }) %>
                         <% } else { %>
