@@ -14,20 +14,55 @@ body{
     line-height: 1.6;
 }
 
+/* Header */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
 }
 
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    padding: 0.5rem;
+    background: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: -6%;
+    font-weight: 600;
+    color: rgb(26, 25, 25);
+}
+nav ul li a:hover{
+    background: #0066ff;
+    color: white;
+}
+
+/* General main */
 main{
+    padding: 0 1rem;
+}
+
+/* General section */
+section{
     background-color: #fff;
     padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
+    margin-bottom: 1rem;
 }
 
 /* Text */
 h1, h2, h3 {letter-spacing: -6%; font-weight: 700;}
+h2 { margin-bottom: 0.5rem;}
+p { margin-bottom: 1rem;}
 
 .error{ 
     color: tomato; 
@@ -38,7 +73,7 @@ h1, h2, h3 {letter-spacing: -6%; font-weight: 700;}
     border-radius: 3px;
 }
 
-/* Sections */
+/* Form section  */
 .form-section{
     width: 100%;
 }
@@ -62,6 +97,11 @@ select {
     padding: 0.45rem;
 }
 
+/* Output section */
+
+/* About section */
+
+
 /* Utility */
 .container {
     max-width: 800px;
@@ -81,4 +121,11 @@ select {
 }
 .btn:hover {
     background: #3d87f7;
+}
+
+/* Media Queries */
+@media (max-width:550px){
+    header{
+        flex-direction: column;
+    }
 }
