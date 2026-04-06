@@ -12,16 +12,24 @@ Applikationen är byggd som en del av kursen Backend-baserad webbutveckling.
 
 ## Databasstruktur
 ### Tabell: Courses
-courses(id(PK), name, code, url, progression)
+```
+courses(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR,
+  code VARCHAR,
+  url VARCHAR,
+  progression VARCHAR
+)
+```
 ### ER-diagram
-Jag gjorde ett enkelt ER-diagram med med tillägget draio i VS Code.
+Jag gjorde ett enkelt ER-diagram med med tillägget draw.io i VS Code.
 ![er-diagram](/assets/er-diagram-cv.png)
 
 ## Sidor i applikationen
 Webbplatsen innehåller tre sidor:
-  - / Startsida som listar alla kurser
-  - /addcourse formulär för att lägga till kurs
-  - /about om sidan
+  - / - Startsida som listar alla kurser
+  - /addcourse - formulär för att lägga till kurs
+  - /about - om sidan
 Respektive undersida renderas med ejs
 
 ## Funktionalitet
