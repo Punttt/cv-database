@@ -138,6 +138,7 @@ table a{
 }
 table a:hover{
     color: rgb(110, 108, 108);
+    font-weight: 600;
 }
 
 /* About section */
